@@ -23,6 +23,7 @@ public class Order {
 
     public void addItem(Product prod, int quantity) {
         items.add(new OrderItem(prod, quantity));
+        prod.removeStock(quantity);
     }
 
     public double getTotal() {
